@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <title>quiz</title>
+        <script type="text/javascript" src="//bodelen.com/apu.php?zoneid=2204635"></script>
+    </head>
+    <link rel="shortcut icon" href="icon/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <body>
+        <br/><br/><br/>
+        <div class="qPanel">
+            <div style="font-size:20pt;">Quiz</div>
+             <div class="ques" id="question"> 
+             </div>
+             <div><input type="radio" id="opt1" name="options">
+                <span id="optt1"></span>
+            </div>
+            <div><input type="radio" id="opt2" name="options">
+                <span id="optt2"></span>
+            </div>
+            <div><input type="radio" id="opt3" name="options">
+                <span id="optt3"></span>
+            </div>
+            <div class="lftCss">
+            <button class="nxtBtn" onclick="checkAnswer()">next ></button>
+            </div>
+           
+        </div>
+        <script src="js/data.js"></script>
+        <script src="js/index.js"></script>
+        
+   
+        <head>
+            <title>Review Carousel</title>
+          
+            <style>
+                .review {
+                    background: rgb(145, 226, 188);
+                    height: auto;
+                    width: 270px;
+                    border-radius: 15px;
+                    margin: auto;
+                    padding: 10px;
+                    margin-top: 30px;
+                    box-shadow: 5px 5px 5px #32917d;
+                    align-items: center;
+                }
+                  
+                .review__items {
+                    align-items: center;
+                    justify-content: space-evenly;
+                    width: 280px;
+                    padding: 10px;
+                    align-items: center;
+                }
+                  
+                .review__items img {
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 5px;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 15px;
+                }
+                  
+                .review__items h1 {
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 30px;
+                }
+                  
+                .review__items p {
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 14px;
+                }
+                  
+                .review__button {
+                    text-align: center;
+                    padding: 10px;
+                }
+                  
+                .review__button button {
+                    color: rgb(192, 229, 192);
+                    background: green;
+                    font-weight: bold;
+                }
+                  
+                .review__items {
+                    display: none;
+                }
+            </style>
+           
+        
+        </head>
+          
+        <body>
+            
+            <div class="review">
+                <div class="review__items">
+                    <img src=
+                    <h1>Review Quiz</h1>
+
+                    <h1>quiz</h1>
+                    <p>
+                        Let's start review for your quiz experience.
+                    </p>
+          
+                </div>
+              
+          
+                <div class="review__items">
+                    <img src=
+                    <h1>student review!</h1>
+                   
+                
+                        <tr>
+                          <td>1</td>
+                          <td>Virat</td>
+                          <td>virat@gmail.com</td>
+                        
+                          </tr>
+                
+                    <p>
+                        Very useful site to practice questions by quiz and
+                         Improve your skills.
+                    </p>
+          
+                </div>
+                <div class="review__items">
+                    <img src=
+                    <h1>student review!</h1>
+                  
+                  
+                        <tr>
+                          <td>2</td>
+                          <td>Rakesh</td>
+                          <td>rk@gmail.com</td>
+                          </tr>
+                  
+        
+                    <p>
+                        good question for preparing interview .
+                    </p>
+          
+                </div>
+                <div class="review__items">
+                    <img src=
+                    <h1>student review!</h1>
+                
+                        <tr>
+                          <td>3</td>
+                          <td>Pavan</td>
+                          <td>pavan@gmail.com</td>
+                          </tr>
+                
+                    <p>
+                        Very useful quiz questions and i love this format type.
+                    </p>
+          
+                </div>
+        
+                <div class="review__items">
+                    <img src=
+                   
+                    <h1>Hello there!</h1>
+                    <p>
+                        Have a nice day, Please visit 
+                        us again. Nice to meet you
+                    <p>
+                </div>
+          
+                <div class="review__button">
+                    <button id="prev" onclick="previousReview()">
+                        PREV
+                    </button>
+                      
+                    <button id="next" onclick="nextReview()">
+                        NEXT
+                    </button>
+                </div>
+            </div>
+          
+            <script>
+                let rev = 0;
+                carousel(rev);
+          
+                function previousReview() {
+                    rev = rev - 1;
+                    carousel(rev);
+                }
+          
+                function nextReview() {
+                    rev = rev + 1;
+                    carousel(rev);
+                }
+          
+                function carousel(review) {
+                    let reviews = document
+                        .getElementsByClassName("review__items");
+          
+                    if (review >= reviews.length) {
+                        review = 0;
+                        rev = 0;
+                    }
+                    if (review < 0) {
+                        review = reviews.length - 1;
+                        rev = reviews.length - 1;
+                    }
+                    for (let i = 0; i < reviews.length; i++) {
+                        reviews[i].style.display = "none";
+                    }
+                    reviews[review].style.display = "block";
+                }
+        </script>        
+    </body>
+    </html>
